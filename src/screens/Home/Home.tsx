@@ -1,25 +1,37 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from '@components';
-import {
-  NavigationHelpersContext,
-  useNavigation,
-} from '@react-navigation/native';
+import {useNavigation, useCallback} from '@hooks';
+import styles from './styles';
 
 type THomeProps = {};
 
 const Home: React.FC<THomeProps> = () => {
   const navigation = useNavigation();
+  const onPress = useCallback(
+    routeName => () => navigation.navigate(routeName),
+    [],
+  );
   return (
-    <View style={{flex: 1, padding: 24}}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-        <TouchableOpacity onPress={() => navigation.navigate('Commit')}>
-          <Text>Commit</Text>
+    <View style={styles.container}>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={onPress('Commit')}>
+          <Text style={styles.link}>Commit</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Map')}>
-          <Text>Map</Text>
+        <TouchableOpacity onPress={onPress('Map')}>
+          <Text style={styles.link}>Map</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SmartInvest')}>
-          <Text>Smart Invest</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={onPress('SmartInvest')}>
+          <Text style={styles.link}>Smart Invest</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onPress('Portray')}>
+          <Text style={styles.link}>Portray</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={onPress('SignIn')}>
+          <Text style={styles.link}>SignIn</Text>
         </TouchableOpacity>
       </View>
     </View>

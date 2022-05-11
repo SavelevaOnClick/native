@@ -11,6 +11,8 @@ module.exports = {
           '@components': ['./src/components'],
           '@hooks': ['./src/hooks'],
           '@constants': ['./src/constants'],
+          '@types': ['./src/types/'],
+          '@services': ['.src/services'],
         },
         cwd: 'packagejson',
       },

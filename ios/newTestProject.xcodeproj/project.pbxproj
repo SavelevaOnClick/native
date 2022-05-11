@@ -36,6 +36,8 @@
 		2E9B72FC73F940DB87163D0B /* inter-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF3A900F1C1A404DBA917F91 /* inter-bold.ttf */; };
 		C699F759ECE249EDB2DF32EC /* inter-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23314A00B68947C688F3CEF6 /* inter-regular.ttf */; };
 		5722815ACE5F4669BBDD49FC /* montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5909E27771C148C1B2BFB966 /* montserrat.ttf */; };
+		9A28C7D3199D4EDEB803FB99 /* NanumGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73C3588C736F4160B18469FC /* NanumGothic-Bold.ttf */; };
+		B23FD58AF13D49D58997649C /* Prompt-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C8FFD41B30648EC87C13546 /* Prompt-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		AF3A900F1C1A404DBA917F91 /* inter-bold.ttf */ = {isa = PBXFileReference; name = "inter-bold.ttf"; path = "../src/assets/fonts/inter-bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		23314A00B68947C688F3CEF6 /* inter-regular.ttf */ = {isa = PBXFileReference; name = "inter-regular.ttf"; path = "../src/assets/fonts/inter-regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5909E27771C148C1B2BFB966 /* montserrat.ttf */ = {isa = PBXFileReference; name = "montserrat.ttf"; path = "../src/assets/fonts/montserrat.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		73C3588C736F4160B18469FC /* NanumGothic-Bold.ttf */ = {isa = PBXFileReference; name = "NanumGothic-Bold.ttf"; path = "../src/assets/fonts/NanumGothic-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6C8FFD41B30648EC87C13546 /* Prompt-Light.ttf */ = {isa = PBXFileReference; name = "Prompt-Light.ttf"; path = "../src/assets/fonts/Prompt-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,8 @@
 				AF3A900F1C1A404DBA917F91 /* inter-bold.ttf */,
 				23314A00B68947C688F3CEF6 /* inter-regular.ttf */,
 				5909E27771C148C1B2BFB966 /* montserrat.ttf */,
+				73C3588C736F4160B18469FC /* NanumGothic-Bold.ttf */,
+				6C8FFD41B30648EC87C13546 /* Prompt-Light.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -341,6 +347,8 @@
 				2E9B72FC73F940DB87163D0B /* inter-bold.ttf in Resources */,
 				C699F759ECE249EDB2DF32EC /* inter-regular.ttf in Resources */,
 				5722815ACE5F4669BBDD49FC /* montserrat.ttf in Resources */,
+				9A28C7D3199D4EDEB803FB99 /* NanumGothic-Bold.ttf in Resources */,
+				B23FD58AF13D49D58997649C /* Prompt-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
