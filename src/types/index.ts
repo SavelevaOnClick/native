@@ -5,3 +5,8 @@ export type {
   NativeModuleError,
   User,
 } from '@react-native-google-signin/google-signin';
+export type {OnLoadData, OnProgressData} from 'react-native-video';
+
+export type {LayoutChangeEvent} from 'react-native';
+export * from './reducers';
+export * from './actions';

@@ -13,6 +13,7 @@ module.exports = {
           '@constants': ['./src/constants'],
           '@types': ['./src/types/'],
           '@services': ['.src/services'],
+          '@reducers': ['.src/reducers']
         },
         cwd: 'packagejson',
       },

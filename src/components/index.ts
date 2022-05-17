@@ -6,6 +6,7 @@ export {
   Image,
   Animated,
   Dimensions,
+  ActivityIndicator,
 } from 'react-native';
 
 export {default as Swipeable} from 'react-native-gesture-handler/Swipeable';
@@ -18,5 +19,6 @@ export {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
-
+export {default as Video} from 'react-native-video';
 export {default as Icon} from './typography/Icon';
+export {Slider} from '@miblanchard/react-native-slider';
