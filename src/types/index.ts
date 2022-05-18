@@ -6,6 +6,7 @@ export type {
   User,
 } from '@react-native-google-signin/google-signin';
 export type {OnLoadData, OnProgressData} from 'react-native-video';
+export type {orientation} from 'react-native-orientation';
 
 export type {LayoutChangeEvent} from 'react-native';
 export * from './reducers';

@@ -1,30 +1,12 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from '@components';
-import {useNavigation, useCallback, useEffect} from '@hooks';
+import {useNavigation, useCallback} from '@hooks';
 import styles from './styles';
-import {Dispatch} from 'react';
-import {ISetOrientation, TGlobalState} from '@types';
-import {connect} from 'react-redux';
-import Orientation, {orientation} from 'react-native-orientation';
-import {setOrientation} from '../../reducers/global';
 
-type THomeProps = {
-  setOrientation: (data: ISetOrientation['data']) => void;
-};
+type THomeProps = {};
 
-const Home: React.FC<THomeProps> = ({setOrientation}) => {
+const Home: React.FC<THomeProps> = () => {
   const navigation = useNavigation();
-
-  const setInitialOrientation = useCallback(
-    (err: Error, orientation: orientation) => setOrientation(orientation),
-    [],
-  );
-
-  useEffect(() => {
-    Orientation.getOrientation(setInitialOrientation);
-    Orientation.addOrientationListener(setOrientation);
-    return () => Orientation.removeOrientationListener(setOrientation);
-  }, []);
 
   const onPress = useCallback(
     routeName => () => navigation.navigate(routeName),
@@ -59,9 +41,5 @@ const Home: React.FC<THomeProps> = ({setOrientation}) => {
     </View>
   );
 };
-const mapDispatchToProps = (dispatch: Dispatch<ISetOrientation>) => ({
-  setOrientation: (data: ISetOrientation['data']) =>
-    dispatch(setOrientation(data)),
-});
 
-export default connect(null, mapDispatchToProps)(Home);
+export default Home;

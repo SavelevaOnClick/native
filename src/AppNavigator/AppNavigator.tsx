@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import React from 'react';
+import React, {Dispatch} from 'react';
 import {
   CommMit,
   Home,
@@ -10,9 +10,24 @@ import {
   SmartInvest,
   VideoPlayer,
 } from '@screens';
+import {ISetOrientation} from '@types';
+import {setOrientation} from '../reducers/global';
+import {connect} from 'react-redux';
+import {useOrientation, useEffect} from '@hooks';
+
 const RootStack = createStackNavigator();
 
-const AppNavigator: React.FC = () => {
+type TAppNavigationProps = {
+  setOrientation: (data: ISetOrientation['data']) => void;
+};
+
+const AppNavigator: React.FC<TAppNavigationProps> = ({setOrientation}) => {
+  const orientation = useOrientation();
+
+  useEffect(() => {
+    orientation && setOrientation(orientation);
+  }, [orientation]);
+
   return (
     <NavigationContainer>
       <RootStack.Navigator screenOptions={{headerShown: false}}>
@@ -27,5 +42,8 @@ const AppNavigator: React.FC = () => {
     </NavigationContainer>
   );
 };
-
-export default AppNavigator;
+const mapDispatchToProps = (dispatch: Dispatch<ISetOrientation>) => ({
+  setOrientation: (data: ISetOrientation['data']) =>
+    dispatch(setOrientation(data)),
+});
+export default connect(null, mapDispatchToProps)(AppNavigator);

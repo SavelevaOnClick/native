@@ -22,3 +22,4 @@ export {
 export {default as Video} from 'react-native-video';
 export {default as Icon} from './typography/Icon';
 export {Slider} from '@miblanchard/react-native-slider';
+export {default as Orientation} from 'react-native-orientation';
